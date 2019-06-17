@@ -4,26 +4,54 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using test2.Context;
 using test2.Models;
 
 namespace test2.Controllers
 {
+    [Route("[controller]")]
     public class HomeController : Controller
+
+
     {
-        public IActionResult Index()
+        private readonly EmployeeDbContext employeeDbContext;
+
+        public HomeController(EmployeeDbContext employeeDbContext)
         {
-            return View();
+            this.employeeDbContext = employeeDbContext;
         }
 
-        public IActionResult Privacy()
+        public ActionResult Index()
         {
-            return View();
+
+            return Ok(this.employeeDbContext.Employees.ToList());
+            //return View();
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
+
+        [HttpGet("TestInsert")]
+        public ActionResult TestInsert()
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+
+            var employee = new Employee()
+            {
+                Name = "Test" + DateTime.Now.Millisecond.ToString(),
+                CompanyName = "test",
+                //Address = " trst",
+                Designation = "sdsad",
+            };
+
+
+            this.employeeDbContext.Add(employee);
+
+            this.employeeDbContext.SaveChanges();
+        
+
+            return Ok(employee);
+
         }
+
+
+
     }
 }

@@ -5,7 +5,6 @@ C:\Users\bam\source\repos\test2\test2\bin\Debug\netcoreapp2.2\test2.dll
 C:\Users\bam\source\repos\test2\test2\bin\Debug\netcoreapp2.2\test2.pdb
 C:\Users\bam\source\repos\test2\test2\bin\Debug\netcoreapp2.2\test2.Views.dll
 C:\Users\bam\source\repos\test2\test2\bin\Debug\netcoreapp2.2\test2.Views.pdb
-C:\Users\bam\source\repos\test2\test2\obj\Debug\netcoreapp2.2\test2.csprojAssemblyReference.cache
 C:\Users\bam\source\repos\test2\test2\obj\Debug\netcoreapp2.2\test2.csproj.CoreCompileInputs.cache
 C:\Users\bam\source\repos\test2\test2\obj\Debug\netcoreapp2.2\test2.RazorAssemblyInfo.cache
 C:\Users\bam\source\repos\test2\test2\obj\Debug\netcoreapp2.2\test2.RazorAssemblyInfo.cs
@@ -28,3 +27,4 @@ C:\Users\bam\source\repos\test2\test2\obj\Debug\netcoreapp2.2\test2.Views.pdb
 C:\Users\bam\source\repos\test2\test2\obj\Debug\netcoreapp2.2\test2.dll
 C:\Users\bam\source\repos\test2\test2\obj\Debug\netcoreapp2.2\test2.pdb
 C:\Users\bam\source\repos\test2\test2\obj\Debug\netcoreapp2.2\test2.csproj.CopyComplete
+C:\Users\bam\source\repos\test2\test2\obj\Debug\netcoreapp2.2\test2.csprojAssemblyReference.cache

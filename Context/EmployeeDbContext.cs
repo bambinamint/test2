@@ -13,6 +13,8 @@ namespace test2.Context
         {
 
         }
-        DbSet<Employee> employees { get; set; }
+        public DbSet<Employee> Employees { get; set; }
     }
+
+
 }

@@ -15,7 +15,7 @@ using test2.Context;
 
 namespace test2
 {
-    public class Startup
+    public class Startup 
     {
         public Startup(IConfiguration configuration)
         {
@@ -28,8 +28,10 @@ namespace test2
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-            services.AddDbContext<EmployeeDbContext>(option => option.UseSqlServer(Configuration.GetConnectionString("myconn")));
-            
+
+            services.AddDbContext<EmployeeDbContext>(option => option.UseSqlServer("server=DESKTOP-BS0OHET\\SQLEXPRESS;database=EmployeeDB;user id=sa;password=123456789;Trusted_Connection=True;"));
+         
+
             // services.Configure<CookiePolicyOptions>(options =>
             // {
             // This lambda determines whether user consent for non-essential cookies is needed for a given request.
@@ -57,7 +59,7 @@ namespace test2
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
-            app.ApplicationServices.GetService<IServiceScopeFactory>().CreateScope().ServiceProvider.GetRequiredService<EmployeeDbContext>().Database.Migrate();          
+           // app.ApplicationServices.GetService<IServiceScopeFactory>().CreateScope().ServiceProvider.GetRequiredService<EmployeeDbContext>().Database.Migrate();          
             app.UseMvc();
         }
     }
